@@ -1,0 +1,29 @@
+{
+  "templateName": "support-ticket",
+  "data": {
+    "company": {
+      "name": "Newton Tech",
+      "address": "Gar, Samsun",
+      "phone": "+90 362 555 01 23",
+      "email": "destek@newtontech.com.tr",
+      "website": "www.newtontech.com.tr"
+    },
+    "client": {
+      "company": "ABC Teknoloji A.Ş.",
+      "contactPerson": "Ayşe Demir",
+      "email": "ayse@abc-tech.com",
+      "phone": "+90 532 111 22 33"
+    },
+    "ticket": {
+      "id": "T-2024-042",
+      "title": "E-posta Sunucu Erişim Sorunu",
+      "description": "Şirket e-posta sunucusuna erişim sağlanamıyor. Outlook ve diğer e-posta istemcilerinde bağlantı hatası alınıyor. Çalışanlar e-posta gönderip alamıyor durumda.",
+      "priority": "Yüksek",
+      "status": "Çözüldü",
+      "createdDate": "2024-01-20T08:15:00",
+      "resolvedDate": "2024-01-20T16:30:00",
+      "technician": "Mehmet Yılmaz",
+      "solution": "1. E-posta sunucu logları incelendi\n2. DNS ayarlarında sorun tespit edildi\n3. MX kayıtları düzeltildi\n4. Firewall kuralları güncellendi\n5. Port 587 ve 993 açıldı\n6. SSL sertifikası yenilendi\n7. Tüm e-posta hesapları test edildi"
+    }
+  }
+} 

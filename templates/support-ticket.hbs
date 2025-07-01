@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknik Destek Raporu</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-n">N</div>
+                    <div class="company-name">Newton Tech</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="company-details">
+                    <div>{{company.address}}</div>
+                    <div>Tel: {{company.phone}} | {{company.email}}</div>
+                    <div>{{company.website}}</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Document Header -->
+        <div class="document-header">
+            <div class="doc-title">TEKNİK DESTEK RAPORU</div>
+            <div class="doc-meta">
+                <table class="meta-table">
+                    <tr>
+                        <td class="label">Rapor No:</td>
+                        <td class="value">{{ticket.id}}</td>
+                        <td class="label">Tarih:</td>
+                        <td class="value">{{currentDate}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- Ticket Overview -->
+            <div class="section">
+                <h3 class="section-title">KAYIT ÖZETİ</h3>
+                <table class="data-table">
+                    <tr>
+                        <td class="field-label">Başlık:</td>
+                        <td class="field-value" colspan="3">{{ticket.title}}</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Öncelik:</td>
+                        <td class="field-value priority-{{ticket.priority}}">{{uppercase ticket.priority}}</td>
+                        <td class="field-label">Durum:</td>
+                        <td class="field-value status-resolved">{{ticket.status}}</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Açılış Tarihi:</td>
+                        <td class="field-value">{{formatDateTime ticket.createdDate 'DD.MM.YYYY HH:mm'}}</td>
+                        <td class="field-label">Çözüm Tarihi:</td>
+                        <td class="field-value">{{formatDateTime ticket.resolvedDate 'DD.MM.YYYY HH:mm'}}</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Teknisyen:</td>
+                        <td class="field-value" colspan="3">{{ticket.technician}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Client Information -->
+            <div class="section">
+                <h3 class="section-title">MÜŞTERİ BİLGİLERİ</h3>
+                <table class="data-table">
+                    <tr>
+                        <td class="field-label">Şirket:</td>
+                        <td class="field-value">{{client.company}}</td>
+                        <td class="field-label">İletişim:</td>
+                        <td class="field-value">{{client.contactPerson}}</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">E-posta:</td>
+                        <td class="field-value">{{client.email}}</td>
+                        <td class="field-label">Telefon:</td>
+                        <td class="field-value">{{client.phone}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Problem Description -->
+            <div class="section">
+                <h3 class="section-title">PROBLEM AÇIKLAMASI</h3>
+                <div class="text-content">
+                    {{ticket.description}}
+                </div>
+            </div>
+
+            <!-- Solution -->
+            <div class="section">
+                <h3 class="section-title">UYGULANAN ÇÖZÜM</h3>
+                <div class="text-content solution-text">
+                    {{ticket.solution}}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-line"></div>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <strong>Newton Tech</strong> | Teknik Destek Birimi
+                </div>
+                <div class="footer-right">
+                    Rapor Tarihi: {{currentDate}} {{currentTime}} | Sayfa 1/1
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+# Railway Ignore
+node_modules/
+.git/
+.gitignore
+*.log
+.env.local
+.env.development.local
+.env.test.local
+README.md
+output/*.pdf
+!output/.gitkeep
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 

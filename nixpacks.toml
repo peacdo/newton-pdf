@@ -1,0 +1,17 @@
+[phases.install]
+dependsOn = ["setup"]
+cmds = ["npm ci"]
+
+[phases.build]
+dependsOn = ["install"]
+cmds = []
+
+[start]
+cmd = "npm run server"
+
+[variables]
+NIXPACKS_METADATA = "node,puppeteer"
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "false"
+
+[providers]
+node = "18" 
