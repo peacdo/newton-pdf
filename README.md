@@ -12,30 +12,51 @@ Kurumsal destek kayıt yönetimi için SAP tarzı profesyonel PDF raporları olu
 ✅ **REST API** - Kolay entegrasyon
 ✅ **Railway Ready** - Production deploy hazır
 
-## Railway Deployment 🚀
+## 🚀 **Deployment Seçenekleri**
 
-### Hızlı Start
+### 1️⃣ **Railway (ÖNERİLEN)** 
+**Hobby Plan: $5/ay** - En kolay çözüm
+
+```bash
+# 1. Railway Hobby Plan'a upgrade yap ($5/ay)
+# 2. GitHub'a push yap
+git add .
+git commit -m "Railway deployment ready"  
+git push origin main
+
+# 3. Railway'e git: https://railway.app/dashboard
+# 4. "New Project" > "Deploy from GitHub repo" > pdf-yarat seç
+```
+
+### 2️⃣ **Render (ÜCRETSİZ!)** 
+**0 maliyet** - Yavaş ama bedava
+
 ```bash
 # 1. GitHub'a push yap
 git add .
-git commit -m "Railway deployment ready"
+git commit -m "Render deployment ready"
 git push origin main
 
-# 2. Railway'e git ve repo'yu bağla
-# https://railway.app/dashboard
-# "New Project" > "Deploy from GitHub repo" > pdf-yarat seç
+# 2. Render'a git: https://render.com
+# 3. "New Web Service" > GitHub repo bağla  
+# 4. Build Command: npm install
+# 5. Start Command: npm run server
 ```
 
-### Manuel CLI Deploy
+### 3️⃣ **Docker Self-Host**
+**VDS/VPS gerekli** - Tam kontrol
+
 ```bash
-npm install -g @railway/cli
-railway login
-railway link
-railway up
+# Docker Build & Run
+docker build -t pdf-yarat .
+docker run -p 3000:3000 pdf-yarat
+
+# Ya da Docker Compose
+docker-compose up -d
 ```
 
 ### Environment Variables
-Railway dashboard'da şu değişkenleri ayarla:
+Tüm platformlar için:
 ```
 NODE_ENV=production
 PORT=3000 (otomatik ayarlanır)
