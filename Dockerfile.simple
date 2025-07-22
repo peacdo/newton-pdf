@@ -1,0 +1,13 @@
+FROM ghcr.io/puppeteer/puppeteer:latest
+
+# Node.js app kurulumu
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+
+# Puppeteer kullanıcısı olarak çalıştır
+USER pptruser
+
+EXPOSE 3000
+CMD ["npm", "run", "server"] 
