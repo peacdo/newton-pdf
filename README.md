@@ -49,7 +49,7 @@ git push origin main
 ```bash
 # Docker Build & Run
 docker build -t pdf-yarat .
-docker run -p 3000:3000 pdf-yarat
+docker run -p 3001:3000 pdf-yarat
 
 # Ya da Docker Compose
 docker-compose up -d
@@ -88,24 +88,34 @@ Server başladıktan sonra:
 
 #### PDF Oluşturma
 ```bash
+# Railway/Render için
 curl -X POST https://your-railway-url.up.railway.app/api/generate-pdf \
+  -H "Content-Type: application/json" \
+  -d @sample-data.json
+
+# Docker self-host için (port 3001)
+curl -X POST http://your-server-ip:3001/api/generate-pdf \
   -H "Content-Type: application/json" \
   -d @sample-data.json
 ```
 
 #### Health Check
 ```bash
+# Railway/Render için
 curl https://your-railway-url.up.railway.app/health
+
+# Docker self-host için
+curl http://your-server-ip:3001/health
 ```
 
 #### Örnek Veri Alma
 ```bash
-curl https://your-railway-url.up.railway.app/api/sample-data
+curl http://your-server-ip:3001/api/sample-data
 ```
 
 #### Template Listesi
 ```bash
-curl https://your-railway-url.up.railway.app/api/templates
+curl http://your-server-ip:3001/api/templates
 ```
 
 ### Programmatic Kullanım
