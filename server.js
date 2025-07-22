@@ -10,12 +10,33 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static('public'));
 
-// Enhanced CORS for Railway
+// Enhanced CORS for Production (HTTPS)
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  // Newton Tech domain'leri için CORS
+  const allowedOrigins = [
+    'https://newton.newtontech.com.tr',
+    'https://destek.newtontech.com.tr', 
+    'https://www.newtontech.com.tr',
+    'https://newtontech.com.tr',
+    'http://localhost:3000',
+    'http://localhost:5173' // Vite dev server
+  ];
+  
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  } else {
+    res.header('Access-Control-Allow-Origin', '*'); // Fallback
+  }
+  
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Credentials', 'true');
+  
+  // HTTPS Security Headers
+  res.header('X-Content-Type-Options', 'nosniff');
+  res.header('X-Frame-Options', 'DENY');
+  res.header('X-XSS-Protection', '1; mode=block');
   
   // Handle preflight requests
   if (req.method === 'OPTIONS') {
@@ -228,7 +249,8 @@ app.listen(PORT, () => {
   console.log(`
 🚀 PDF Yaratıcı API başlatıldı!
 📍 Port: ${PORT}
-🌐 URL: http://localhost:${PORT}
+🌐 Production URL: https://pdf.newtontech.com.tr
+🏠 Local URL: http://localhost:${PORT}
 📚 API Endpoints:
    - GET  /                    (Ana sayfa)
    - POST /api/generate-pdf    (PDF oluştur)
@@ -236,7 +258,8 @@ app.listen(PORT, () => {
    - GET  /api/health          (Sistem durumu)
    - GET  /api/sample-data     (Örnek veri)
    
-💡 Test için: curl -X POST http://localhost:${PORT}/api/generate-pdf -H "Content-Type: application/json" -d @sample-data.json
+💡 Production Test: curl -X POST https://pdf.newtontech.com.tr/api/generate-pdf -H "Content-Type: application/json" -d @sample-data.json
+💡 Local Test: curl -X POST http://localhost:${PORT}/api/generate-pdf -H "Content-Type: application/json" -d @sample-data.json
   `);
 });
 

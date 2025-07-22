@@ -84,6 +84,10 @@ npm run server  # API server başlat
 npm run server
 ```
 
+## 🌐 Production URL
+
+**API Base URL**: `https://pdf.newtontech.com.tr`
+
 Server başladıktan sonra:
 
 #### PDF Oluşturma
@@ -93,8 +97,8 @@ curl -X POST https://your-railway-url.up.railway.app/api/generate-pdf \
   -H "Content-Type: application/json" \
   -d @sample-data.json
 
-# Docker self-host için (port 3001)
-curl -X POST http://your-server-ip:3001/api/generate-pdf \
+# Docker self-host için
+curl -X POST https://pdf.newtontech.com.tr/api/generate-pdf \
   -H "Content-Type: application/json" \
   -d @sample-data.json
 ```
@@ -105,17 +109,17 @@ curl -X POST http://your-server-ip:3001/api/generate-pdf \
 curl https://your-railway-url.up.railway.app/health
 
 # Docker self-host için
-curl http://your-server-ip:3001/health
+curl https://pdf.newtontech.com.tr/health
 ```
 
 #### Örnek Veri Alma
 ```bash
-curl http://your-server-ip:3001/api/sample-data
+curl https://pdf.newtontech.com.tr/api/sample-data
 ```
 
 #### Template Listesi
 ```bash
-curl http://your-server-ip:3001/api/templates
+curl https://pdf.newtontech.com.tr/api/templates
 ```
 
 ### Programmatic Kullanım
@@ -156,7 +160,7 @@ await generator.generatePDF('support-ticket', data);
 ```javascript
 // Newton Destek projesinde
 const generatePDF = async (ticketData) => {
-  const response = await fetch('https://your-railway-url.up.railway.app/api/generate-pdf', {
+  const response = await fetch('https://pdf.newtontech.com.tr/api/generate-pdf', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
