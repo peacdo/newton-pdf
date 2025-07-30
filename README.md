@@ -193,26 +193,27 @@ const generatePDF = async (ticketData) => {
 ```javascript
 {
   company: {
-    name: "Newton Tech",
-    address: "Gar, Samsun",
-    phone: "+90 362 555 01 23", 
+    name: "NewtonTech",
+    address: "İstasyon Mahallesi, Cumhuriyet Caddesi No: 59/2, Kat: 1, İlkadım/Samsun",
+    phone: "+90 362 231 0 444", 
     email: "destek@newtontech.com.tr",
     website: "www.newtontech.com.tr"
   },
   client: {
     company: "Müşteri şirketi",
-    contactPerson: "İletişim kişisi",
-    email: "E-posta",
-    phone: "Telefon"
+    taxNumber: "Vergi kimlik numarası",
+    address: "Müşteri adresi",
+    customerType: "Ücretli veya Sözleşmeli"
   },
   ticket: {
     id: "Kayıt numarası",
     title: "Başlık",
     description: "Açıklama",
-    priority: "Öncelik seviyesi (Yüksek/Orta/Düşük)",
     status: "Durum",
-    technician: "Teknisyen",
+    technicians: "Atanan teknisyen(ler)",
+    fee: "Ücret bilgisi (TL + KDV)",
     solution: "Çözüm detayları",
+    customerComments: "Müşteri yorumları (opsiyonel)",
     createdDate: "2024-01-20T09:30:00", // ISO format
     resolvedDate: "2024-01-20T16:45:00"  // ISO format
   }

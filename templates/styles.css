@@ -165,32 +165,6 @@ body {
 }
 
 /* Status Styles */
-.priority-Yüksek, .priority-YÜKSEK {
-    background: #dc3545;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 2px;
-    font-size: 9px;
-    font-weight: 700;
-}
-
-.priority-Orta, .priority-ORTA {
-    background: #fd7e14;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 2px;
-    font-size: 9px;
-    font-weight: 700;
-}
-
-.priority-Düşük, .priority-DÜŞÜK {
-    background: #198754;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 2px;
-    font-size: 9px;
-    font-weight: 700;
-}
 
 .status-resolved {
     background: #198754;

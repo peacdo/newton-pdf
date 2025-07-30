@@ -12,7 +12,7 @@
             <div class="header-left">
                 <div class="logo">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" class="logo-img" alt="Newton Tech">
-                    <div class="company-name">Newton Tech</div>
+                    <div class="company-name">NewtonTech</div>
                 </div>
             </div>
             <div class="header-right">
@@ -51,10 +51,8 @@
                         <td class="field-value" colspan="3">{{ticket.title}}</td>
                     </tr>
                     <tr>
-                        <td class="field-label">Öncelik:</td>
-                        <td class="field-value priority-{{ticket.priority}}">{{uppercase ticket.priority}}</td>
                         <td class="field-label">Durum:</td>
-                        <td class="field-value status-resolved">{{ticket.status}}</td>
+                        <td class="field-value status-resolved" colspan="3">{{ticket.status}}</td>
                     </tr>
                     <tr>
                         <td class="field-label">Açılış Tarihi:</td>
@@ -63,8 +61,10 @@
                         <td class="field-value">{{formatDateTime ticket.resolvedDate 'DD.MM.YYYY HH:mm'}}</td>
                     </tr>
                     <tr>
-                        <td class="field-label">Teknisyen:</td>
-                        <td class="field-value" colspan="3">{{ticket.technician}}</td>
+                        <td class="field-label">Atanan Teknisyen(ler):</td>
+                        <td class="field-value">{{ticket.technicians}}</td>
+                        <td class="field-label">Ücret:</td>
+                        <td class="field-value">{{ticket.fee}}</td>
                     </tr>
                 </table>
             </div>
@@ -74,16 +74,16 @@
                 <h3 class="section-title">MÜŞTERİ BİLGİLERİ</h3>
                 <table class="data-table">
                     <tr>
-                        <td class="field-label">Şirket:</td>
+                        <td class="field-label">Ünvan (Şirket Adı):</td>
                         <td class="field-value">{{client.company}}</td>
-                        <td class="field-label">İletişim:</td>
-                        <td class="field-value">{{client.contactPerson}}</td>
+                        <td class="field-label">VKN (Vergi Kimlik):</td>
+                        <td class="field-value">{{client.taxNumber}}</td>
                     </tr>
                     <tr>
-                        <td class="field-label">E-posta:</td>
-                        <td class="field-value">{{client.email}}</td>
-                        <td class="field-label">Telefon:</td>
-                        <td class="field-value">{{client.phone}}</td>
+                        <td class="field-label">Adres:</td>
+                        <td class="field-value">{{client.address}}</td>
+                        <td class="field-label">Müşteri Tipi:</td>
+                        <td class="field-value">{{client.customerType}}</td>
                     </tr>
                 </table>
             </div>
@@ -104,6 +104,16 @@
                 </div>
             </div>
 
+            <!-- Customer Comments -->
+            {{#if ticket.customerComments}}
+            <div class="section">
+                <h3 class="section-title">MÜŞTERİ YORUMLARI</h3>
+                <div class="text-content solution-text">
+                    {{ticket.customerComments}}
+                </div>
+            </div>
+            {{/if}}
+
         </div>
 
         <!-- Footer -->
@@ -111,7 +121,7 @@
             <div class="footer-line"></div>
             <div class="footer-content">
                 <div class="footer-left">
-                    <strong>Newton Tech</strong> | Teknik Destek Birimi
+                    <strong>NewtonTech</strong> | Teknik Destek Birimi
                 </div>
                 <div class="footer-right">
                     Rapor Tarihi: {{currentDate}} {{currentTime}} | Sayfa 1/1

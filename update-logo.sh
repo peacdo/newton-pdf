@@ -17,6 +17,9 @@ echo "📝 Template güncelleniyor..."
 sed -i "s|data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==|data:image/png;base64,$LOGO_BASE64|" templates/support-ticket.hbs
 
 echo "✅ Logo başarıyla güncellendi!"
-echo "🐳 Şimdi Docker konteyner'ını yeniden başlatın:"
+echo "🧪 Template test etmek için:"
+echo "   curl -X POST https://pdf.newtontech.com.tr/api/generate-pdf -H \"Content-Type: application/json\" -d @sample-data.json"
+echo ""
+echo "🐳 Docker konteyner'ını yeniden başlatın:"
 echo "   docker-compose down"
 echo "   docker-compose up -d --build" 

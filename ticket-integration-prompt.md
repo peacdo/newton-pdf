@@ -19,26 +19,27 @@ Newton Ticket sistemime PDF rapor oluşturma özelliği eklemek istiyorum.
   "templateName": "support-ticket",
   "data": {
     "company": {
-      "name": "Newton Tech",
-      "address": "Gar, Samsun", 
-      "phone": "+90 362 555 01 23",
+      "name": "NewtonTech",
+      "address": "İstasyon Mahallesi, Cumhuriyet Caddesi No: 59/2, Kat: 1, İlkadım/Samsun", 
+      "phone": "+90 362 231 0 444",
       "email": "destek@newtontech.com.tr",
       "website": "www.newtontech.com.tr"
     },
     "client": {
       "company": "Müşteri şirketi adı",
-      "contactPerson": "İletişim kişisi adı",
-      "email": "musteri@email.com",
-      "phone": "Telefon numarası"
+      "taxNumber": "Vergi kimlik numarası",
+      "address": "Müşteri adresi",
+      "customerType": "Ücretli veya Sözleşmeli"
     },
     "ticket": {
       "id": "Ticket ID",
       "title": "Ticket başlığı", 
       "description": "Problem açıklaması",
-      "priority": "Yüksek/Orta/Düşük",
       "status": "Ticket durumu",
-      "technician": "Atanan teknisyen",
+      "technicians": "Atanan teknisyen(ler)",
+      "fee": "Ücret bilgisi (TL + KDV)",
       "solution": "Uygulanan çözüm detayları",
+      "customerComments": "Müşteri yorumları (opsiyonel)",
       "createdDate": "2024-01-20T09:30:00",
       "resolvedDate": "2024-01-20T16:45:00"
     }
@@ -113,18 +114,19 @@ interface TicketPDFData {
   };
   client: {
     company: string;
-    contactPerson: string;
-    email: string;
-    phone?: string;
+    taxNumber: string;
+    address: string;
+    customerType: 'Ücretli' | 'Sözleşmeli';
   };
   ticket: {
     id: string;
     title: string;
     description: string;
-    priority: 'Yüksek' | 'Orta' | 'Düşük';
     status: string;
-    technician: string;
+    technicians: string;
+    fee: string;
     solution: string;
+    customerComments?: string;
     createdDate: string;
     resolvedDate: string;
   };

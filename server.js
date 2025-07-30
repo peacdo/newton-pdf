@@ -188,28 +188,29 @@ app.get('/api/health', (req, res) => {
 app.get('/api/sample-data', (req, res) => {
   const sampleData = {
     company: {
-      name: "Newton Tech",
-      address: "Gar, Samsun",
-      phone: "+90 362 555 01 23",
+      name: "NewtonTech",
+      address: "İstasyon Mahallesi, Cumhuriyet Caddesi No: 59/2, Kat: 1, İlkadım/Samsun",
+      phone: "+90 362 231 0 444",
       email: "destek@newtontech.com.tr",
       website: "www.newtontech.com.tr"
     },
     client: {
       company: "Müşteri Şirketi A.Ş.",
-      contactPerson: "Ahmet Özkan",
-      email: "ahmet@musteri.com",
-      phone: "+90 532 987 65 43"
+      taxNumber: "1234567890",
+      address: "Örnek Mahallesi, Cumhuriyet Caddesi No: 123, Merkez/Samsun",
+      customerType: "Sözleşmeli"
     },
     ticket: {
       id: "T-2024-001",
       title: "Sunucu Performans Sorunu",
       description: "Müşterinin web sunucusunda yavaşlık problemi tespit edildi. CPU kullanımı %90'ın üzerinde seyrediyor. Kullanıcılar site yüklenme sürelerinden şikayetçi.",
-      priority: "Yüksek",
       status: "Çözüldü",
       createdDate: "2024-01-15T09:30:00",
       resolvedDate: "2024-01-16T14:45:00",
-      technician: "Mehmet Demir",
-      solution: "1. Sunucu performans analizi yapıldı\n2. Gereksiz servisler kapatıldı\n3. RAM kapasitesi 16GB'dan 32GB'a yükseltildi\n4. Sistem optimizasyonu gerçekleştirildi\n5. Monitoring araçları kuruldu"
+      technicians: "Mehmet Demir, Ahmet Yılmaz",
+      fee: "1.500,00 TL + KDV",
+      solution: "1. Sunucu performans analizi yapıldı\n2. Gereksiz servisler kapatıldı\n3. RAM kapasitesi 16GB'dan 32GB'a yükseltildi\n4. Sistem optimizasyonu gerçekleştirildi\n5. Monitoring araçları kuruldu",
+      customerComments: "Sistem artık çok daha hızlı çalışıyor. Teşekkürler.\n\nMüşteri: Ahmet Özkan\nTarih: 16.01.2024 15:30"
     }
   };
   
