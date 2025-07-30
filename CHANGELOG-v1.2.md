@@ -24,11 +24,11 @@
 - **Kaldırıldı:** Öncelik alanı (priority)
 - **Güncellendi:** `technician` → `technicians` (çoğul)
 - **Eklendi:** Ücret bilgisi (fee)
-- **Eklendi:** Müşteri yorumları (customerComments)
+
 
 ### 🎨 Template Değişiklikleri
 - NewtonTech logo placeholder eklendi
-- Müşteri Yorumları bölümü eklendi
+- Rapor No ve Tarihi kayıt özetine taşındı
 - Öncelik stileri kaldırıldı
 - Layout düzenlemeleri yapıldı
 
@@ -57,8 +57,7 @@
     "resolvedDate": "2024-01-20T16:30:00",
     "technicians": "Mehmet Yılmaz, Ali Şen",
     "fee": "2.000,00 TL + KDV",
-    "solution": "Uygulanan çözüm detayları...",
-    "customerComments": "Müşteri yorumları..."
+    "solution": "Uygulanan çözüm detayları..."
   }
 }
 ```
@@ -85,6 +84,8 @@ SSL destekli production URL: `https://pdf.newtontech.com.tr`
 - `technician` → `technicians` oldu
 - Müşteri bilgileri formatı değişti
 - `fee` alanı zorunlu hale geldi
+- `customerComments` alanı kaldırıldı
+- Rapor No ve Tarihi kayıt özetine taşındı
 
 ## 📝 Migration Guide
 Eski format kullanan entegrasyonlar yeni veri formatına göre güncellenmeli.

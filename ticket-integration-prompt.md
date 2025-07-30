@@ -39,7 +39,6 @@ Newton Ticket sistemime PDF rapor oluşturma özelliği eklemek istiyorum.
       "technicians": "Atanan teknisyen(ler)",
       "fee": "Ücret bilgisi (TL + KDV)",
       "solution": "Uygulanan çözüm detayları",
-      "customerComments": "Müşteri yorumları (opsiyonel)",
       "createdDate": "2024-01-20T09:30:00",
       "resolvedDate": "2024-01-20T16:45:00"
     }
@@ -126,7 +125,6 @@ interface TicketPDFData {
     technicians: string;
     fee: string;
     solution: string;
-    customerComments?: string;
     createdDate: string;
     resolvedDate: string;
   };

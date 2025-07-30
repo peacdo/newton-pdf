@@ -1,6 +1,6 @@
 {
   "name": "pdf-yarat",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Newton Tech - SSL destekli destek kayıt yönetim sistemi için otomatik PDF oluşturucu",
   "main": "index.js",
   "scripts": {

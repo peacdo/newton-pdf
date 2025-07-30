@@ -213,7 +213,6 @@ const generatePDF = async (ticketData) => {
     technicians: "Atanan teknisyen(ler)",
     fee: "Ücret bilgisi (TL + KDV)",
     solution: "Çözüm detayları",
-    customerComments: "Müşteri yorumları (opsiyonel)",
     createdDate: "2024-01-20T09:30:00", // ISO format
     resolvedDate: "2024-01-20T16:45:00"  // ISO format
   }

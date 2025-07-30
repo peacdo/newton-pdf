@@ -23,8 +23,7 @@
       "resolvedDate": "2024-01-20T16:30:00",
       "technicians": "Mehmet Yılmaz, Ali Şen",
       "fee": "2.000,00 TL + KDV",
-      "solution": "1. E-posta sunucu logları incelendi\n2. DNS ayarlarında sorun tespit edildi\n3. MX kayıtları düzeltildi\n4. Firewall kuralları güncellendi\n5. Port 587 ve 993 açıldı\n6. SSL sertifikası yenilendi\n7. Tüm e-posta hesapları test edildi",
-      "customerComments": "E-posta sistemi artık sorunsuz çalışıyor. Hızlı müdahaleniz için teşekkürler.\n\nMüşteri: Ayşe Demir\nTarih: 20.01.2024 17:00"
+      "solution": "1. E-posta sunucu logları incelendi\n2. DNS ayarlarında sorun tespit edildi\n3. MX kayıtları düzeltildi\n4. Firewall kuralları güncellendi\n5. Port 587 ve 993 açıldı\n6. SSL sertifikası yenilendi\n7. Tüm e-posta hesapları test edildi"
     }
   }
 } 

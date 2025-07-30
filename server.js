@@ -209,8 +209,7 @@ app.get('/api/sample-data', (req, res) => {
       resolvedDate: "2024-01-16T14:45:00",
       technicians: "Mehmet Demir, Ahmet Yılmaz",
       fee: "1.500,00 TL + KDV",
-      solution: "1. Sunucu performans analizi yapıldı\n2. Gereksiz servisler kapatıldı\n3. RAM kapasitesi 16GB'dan 32GB'a yükseltildi\n4. Sistem optimizasyonu gerçekleştirildi\n5. Monitoring araçları kuruldu",
-      customerComments: "Sistem artık çok daha hızlı çalışıyor. Teşekkürler.\n\nMüşteri: Ahmet Özkan\nTarih: 16.01.2024 15:30"
+      solution: "1. Sunucu performans analizi yapıldı\n2. Gereksiz servisler kapatıldı\n3. RAM kapasitesi 16GB'dan 32GB'a yükseltildi\n4. Sistem optimizasyonu gerçekleştirildi\n5. Monitoring araçları kuruldu"
     }
   };
   

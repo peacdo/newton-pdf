@@ -27,16 +27,6 @@
         <!-- Document Header -->
         <div class="document-header">
             <div class="doc-title">TEKNİK DESTEK RAPORU</div>
-            <div class="doc-meta">
-                <table class="meta-table">
-                    <tr>
-                        <td class="label">Rapor No:</td>
-                        <td class="value">{{ticket.id}}</td>
-                        <td class="label">Tarih:</td>
-                        <td class="value">{{currentDate}}</td>
-                    </tr>
-                </table>
-            </div>
         </div>
 
         <!-- Main Content -->
@@ -46,6 +36,12 @@
             <div class="section">
                 <h3 class="section-title">KAYIT ÖZETİ</h3>
                 <table class="data-table">
+                    <tr>
+                        <td class="field-label">Rapor No:</td>
+                        <td class="field-value">{{ticket.id}}</td>
+                        <td class="field-label">Rapor Tarihi:</td>
+                        <td class="field-value">{{currentDate}}</td>
+                    </tr>
                     <tr>
                         <td class="field-label">Başlık:</td>
                         <td class="field-value" colspan="3">{{ticket.title}}</td>
@@ -104,15 +100,7 @@
                 </div>
             </div>
 
-            <!-- Customer Comments -->
-            {{#if ticket.customerComments}}
-            <div class="section">
-                <h3 class="section-title">MÜŞTERİ YORUMLARI</h3>
-                <div class="text-content solution-text">
-                    {{ticket.customerComments}}
-                </div>
-            </div>
-            {{/if}}
+
 
         </div>
 
